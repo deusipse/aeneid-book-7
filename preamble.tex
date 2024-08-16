@@ -1,0 +1,55 @@
+\usepackage{fontspec}
+\usepackage{geometry}
+\geometry{
+  top = 0.75in,
+  bottom = 1in,
+  left = 2in,
+  right = 1.25in
+}
+\usepackage[series={}, nocritical, noeledsec, noend, nofamiliar, noledgroup]{reledmac}
+\setlinenum{322}
+\usepackage{reledpar}
+\usepackage{microtype}
+\usepackage{setspace}
+% \usepackage{newtxtext}
+% \usepackage{arial}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+\usepackage{lipsum}
+\usepackage{multicol}
+\setlength\columnsep{1.75in}
+\usepackage{parskip}
+\usepackage[pdfusetitle, hidelinks]{hyperref}
+\usepackage[english, main=latin]{babel}
+\babeltags{english = english}
+
+\newcommand{\Translation}[3]{
+  \textbf{\large \sffamily #1}
+  \begin{multicols}{2}
+    \begin{spacing}{1.7}
+      \beginnumbering
+      \pstart
+      #2
+      \pend
+      \pausenumbering
+    \end{spacing}
+    \columnbreak
+    #3
+  \end{multicols}
+}
+\newcommand{\translation}[3]{
+  \textbf{\large \sffamily #1}
+  \begin{multicols}{2}
+    \begin{spacing}{1.7}
+      \resumenumbering
+      \pstart
+      #2
+      \pend
+      \pausenumbering
+    \end{spacing}
+    \columnbreak
+    #3
+  \end{multicols}
+}
